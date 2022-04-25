@@ -1,0 +1,21 @@
+<p>Empresa Filho:{{empresaFilho}}</p>
+
+<table class="table table-bordered table-striped ">
+  <tr>
+      <th> ID </th>
+      <th> Nome </th>
+      <th> CPF </th>
+      <th> Rua </th>
+      <th> Número </th>
+      <th> CEP </th>
+  </tr>
+  <tr *ngFor="let p of professores">
+      <td> {{p.id}} </td>
+      <td> {{p.nome}} </td>
+      <td> {{p.cpf}} </td>
+      <td> {{p.rua}} </td>
+      <td> {{p.numero}} </td>
+      <td> {{p.cep}} </td>
+  </tr>
+
+</table>

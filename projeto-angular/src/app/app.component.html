@@ -1,0 +1,60 @@
+<div class="container">
+    <ul class="nav nav-pills nav-fill justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']"
+        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/professores']"
+        routerLinkActive="active">Professores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/formularios/reativo-form']"
+        routerLinkActive="active" >Formulários</a>
+      </li>
+
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+<!--
+  <app-listar [empresaFilho]="empresa"></app-listar>
+  <h1>Componente Root</h1>
+  <p>Interpolação: {{title}}</p>
+
+<p [style]="corFundo">
+  Empresa: {{empresa}}
+</p>
+
+<p>
+  <button (click)="clicar()"> Clique aqui</button>
+</p>
+
+<p>
+  <input class="form-control" type="text" [value]="empresa">
+</p>
+
+<p>Aparecer um texto padrao no imput</p>
+<p>
+  <input type="text" [value]="empresa"
+    (keyup)="getTextoDigitado(empresaInput)"
+    #empresaInput >
+</p>
+
+<p>
+<input type="text" [(ngModel)]="empresa">
+</p> -->
+
+<!-- <div class="row" style="background-color: gray;">
+  <div class="col-4">
+    <input type="text" [(ngModel)]="empresa">
+  </div>
+  <div class="col-4">
+    <input type="text" [(ngModel)]="empresa">
+  </div>
+  <div class="col-2">
+    <input type="text" [(ngModel)]="empresa">
+  </div>
+</div> -->
