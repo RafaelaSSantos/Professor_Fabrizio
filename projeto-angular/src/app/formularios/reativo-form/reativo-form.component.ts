@@ -7,20 +7,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reativo-form.component.scss']
 })
 export class ReativoFormComponent implements OnInit {
-  //inicializando a variável meuForm com um objet com controles vazios -> {}
+
+  // inicializando a variável meuForm com um objet com controles vazios -> {}
   meuForm: FormGroup = new FormGroup({});
 
-  constructor(
-    //é um serviço utilizado para ajudar  criar os mecanismo controles de formulario
-    private formBuilder: FormBuilder
-  ) { }
+  // FormBuilder é um serviço utilizado para ajudar a criar os mecanismos de controles do formulário
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
     this.meuForm = this.formBuilder.group({
-      email : [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required]]
+      email : [ null, [ Validators.required, Validators.email ] ],
+      password : [ null, [ Validators.required ] ]
     });
+
     console.log(this.meuForm);
   }
-
 }

@@ -14,8 +14,10 @@ export class MostrarMensagemComponent implements OnInit {
   @Input()
   mensagem : string = 'Erro ao preencher campo' ;
 
+  @Input()
+  debug : boolean = false;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {  }
 }

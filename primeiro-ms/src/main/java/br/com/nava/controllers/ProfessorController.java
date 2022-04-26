@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import br.com.nava.dtos.ProfessorDTO;
 import br.com.nava.services.ProfessorService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("professores")
 public class ProfessorController {	

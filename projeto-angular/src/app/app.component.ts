@@ -7,11 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto-angular';
-  empresa='NAVA';
+  empresa = 'NAVA';
 
   corFundo = "background-color:yellow;"
-
-
+  
   getColor(){
     let color='yellow'
     return 'yellow'
@@ -23,6 +22,6 @@ export class AppComponent {
 
   getTextoDigitado(elemento : any){
     console.log(elemento.value)
-    this.empresa =elemento.value;
+    this.empresa = elemento.value;
   }
 }
