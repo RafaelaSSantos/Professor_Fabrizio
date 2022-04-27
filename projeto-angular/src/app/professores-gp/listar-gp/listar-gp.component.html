@@ -1,17 +1,23 @@
-<div class="row float-end">
-  <button class="btn btn-success" routerLink="/professoresgp/add"> Add </button>
+<div style="margin-top: 5%;" class="row float-end">
+  <button class="btn btn-outline-success" routerLink="/professoresgp/add"> Add +</button>
 </div>
 
 <table class="table table-bordered table-striped ">
   <tr>
-      <th scope="row"> ID </th>
-      <th scope="row"> Nome </th>
-      <th scope="row"> Email</th>
+    <th> ID </th>
+    <th> Nome </th>
+    <th> Email</th>
   </tr>
+  
   <tr *ngFor="let prof of professoresgp">
-      <td> {{prof.id}} </td>
-      <td> {{prof.nome}} </td>
-      <td> {{prof.email}} </td>
+    <td> {{prof.id}} </td>
+    <td> {{prof.nome}} </td>
+    <td> {{prof.email}} </td>
+    <td>
+      <button style="margin-right: 20%;" class="btn btn-outline-info" [routerLink]="['/professoresgp/editar', prof.id]">Editar</button>
+
+      <button class="btn btn-outline-danger" (click)="onDelete(prof.id!)"> Deletar </button>
+    </td>
   </tr>
 </table>
 
