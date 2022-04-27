@@ -1,0 +1,19 @@
+<div class="row float-end">
+  <button class="btn btn-success" routerLink="/professoresgp/add"> Add </button>
+</div>
+
+<table class="table table-bordered table-striped ">
+  <tr>
+      <th scope="row"> ID </th>
+      <th scope="row"> Nome </th>
+      <th scope="row"> Email</th>
+  </tr>
+  <tr *ngFor="let prof of professoresgp">
+      <td> {{prof.id}} </td>
+      <td> {{prof.nome}} </td>
+      <td> {{prof.email}} </td>
+  </tr>
+</table>
+
+<!--http://cursos.grandeporte.com.br:8080/professores
+criar um outro módulo para criar os componentes para listar os professores da API acima e conseguir criar um novo professor, o módulo deve se chamar  professores-gp-->

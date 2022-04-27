@@ -1,19 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ListarComponent } from './listar.component';
 
-describe('ListarComponent', () => {
-  let component: ListarComponent;
-  let fixture: ComponentFixture<ListarComponent>;
+import { ProfessoresGpFormComponent } from './professores-gp-form.component';
+
+describe('ProfessoresGpFormComponent', () => {
+  let component: ProfessoresGpFormComponent;
+  let fixture: ComponentFixture<ProfessoresGpFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListarComponent ]
+      declarations: [ ProfessoresGpFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListarComponent);
+    fixture = TestBed.createComponent(ProfessoresGpFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
