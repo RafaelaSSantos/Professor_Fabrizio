@@ -15,4 +15,6 @@ export class ProfessoresGpService{
   save(professorObj: any){
     return this.httpClient.post('http://cursos.grandeporte.com.br:8080/professores', professorObj);
   }
+
+  //patch
 }
