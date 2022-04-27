@@ -12,8 +12,16 @@ export class ProfessoresService {
   getAll(){
     return this.httpClient.get('http://localhost:8080/professores');
   }
-  
+
   save(professorObj: any){
     return this.httpClient.post('http://localhost:8080/professores', professorObj);
   }
+
+  delete(id : number){
+    //return this.httpClient.delete('http://localhost:8080/professores/' + id);
+    return this.httpClient.delete(`http://localhost:8080/professores/${id}`);
+  }
+
+
+  
 }

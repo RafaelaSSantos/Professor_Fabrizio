@@ -43,19 +43,34 @@ export class ListarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    this.professoresService.getAll()
-      .subscribe(
-        (data) => {
-          console.log(data);
-          this.professores = data;
-        }
-      );
-
+    this.getAll();
     this.activatedRoute.params.subscribe(
       (data) => {
         console.log(data);
       }
     );
   }
+
+  onDelete(id: number){
+    this.professoresService.delete(id)
+      .subscribe(
+        ()=>{
+          console.log(`deletou registro com id ${id}`);
+          //this.router.navigate(['/professores/#']);
+          this.getAll();
+        }
+      );
+  }
+
+  private getAll(){
+    this.professoresService.getAll()
+    .subscribe(
+      (data) => {
+        console.log(data);
+        this.professores = data;
+      }
+    );
+  }
+
+
 }
